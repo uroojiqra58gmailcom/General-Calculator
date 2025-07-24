@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator-title">
+                <h1>CALC<span>X</span></h1>
+            </div>
+
+            <div class="display">
+                <div class="history" id="history"></div>
+                <div class="current-input" id="current-input">0</div>
+            </div>
+
+            <div class="buttons">
+                <div class="row">
+                    <button class="function-btn" data-action="clear">AC</button>
+                    <button class="function-btn" data-action="backspace"><i class="fas fa-backspace"></i></button>
+                    <button class="function-btn" data-action="percent">%</button>
+                    <button class="operator" data-action="divide">÷</button>
+                </div>
+                <div class="row">
+                    <button class="number">7</button>
+                    <button class="number">8</button>
+                    <button class="number">9</button>
+                    <button class="operator" data-action="multiply">×</button>
+                </div>
+                <div class="row">
+                    <button class="number">4</button>
+                    <button class="number">5</button>
+                    <button class="number">6</button>
+                    <button class="operator" data-action="subtract">-</button>
+                </div>
+                <div class="row">
+                    <button class="number">1</button>
+                    <button class="number">2</button>
+                    <button class="number">3</button>
+                    <button class="operator" data-action="add">+</button>
+                </div>
+                <div class="row">
+                    <button class="number zero">0</button>
+                    <button class="number">.</button>
+                    <button class="equals" data-action="calculate">=</button>
+                </div>
+            </div>
+
+            <div class="calculator-footer">
+                <p>Simple & Stylish</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio files for button sounds -->
+    <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-modern-click-box-check-1120.mp3" preload="auto"></audio>
+    <audio id="operator-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3" preload="auto"></audio>
+    <audio id="equals-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3" preload="auto"></audio>
+
+    <!-- Sound enabler message -->
+    <div id="sound-enabler" style="position: fixed; bottom: 10px; left: 10px; background: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 5px; display: none;">
+        <p>Click here to enable calculator sounds</p>
+    </div>
+</body>
+</html>
